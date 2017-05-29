@@ -60,6 +60,5 @@ public class Main extends Application {
 		int b = 10;
 		int B = 11;
 		int c = 12;
-		
 	}
 }
