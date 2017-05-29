@@ -61,7 +61,7 @@ public class Main extends Application {
 		int B = 11;
 		int c = 12;
 		
-		System.out.println("This is the third commit, this time as a Commit and Push");
+		System.out.println("This is the fourth commit, this time as a Commit");
 		
 	}
 }
