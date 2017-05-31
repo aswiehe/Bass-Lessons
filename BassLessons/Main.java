@@ -5,6 +5,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 
+
 public class Main extends Application {
 	public void start(Stage stage){
 		Group group = new Group();
@@ -60,5 +61,9 @@ public class Main extends Application {
 		int b = 10;
 		int B = 11;
 		int c = 12;		
+	}
+	
+	public static void main(String[] args){
+		Application.launch();
 	}
 }
