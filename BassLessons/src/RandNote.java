@@ -4,7 +4,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class RandNote extends Main{
-	public ImageView randNotes(){
+	public Image randNotes(){
 		
 		Random rand = new Random();
 		int  n = rand.nextInt(12);
@@ -14,7 +14,7 @@ public class RandNote extends Main{
 		ImageView DL = new ImageView();
 		DL.setImage(transposedNoteDL);
 		
-		return DL;
+		return transposedNoteDL;
 		
 		/*
 		switch (n){

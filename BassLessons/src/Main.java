@@ -20,15 +20,15 @@ public class Main extends Application {
 		stage.show();
 
 		//passing in bass clef image
-		Image bassClef = new Image("Large_Bass_Clef.png");
-		ImageView iv = new ImageView();
-		iv.setImage(bassClef);
-		//Image transposedNoteDL = new Image("D_Lower_Clef.png");
-		//ImageView DL = new ImageView();
-		//DL.setImage(transposedNoteDL);
-				
+		//Image bassClef = new Image("Large_Bass_Clef.png");
+		//ImageView iv = new ImageView();
+		//iv.setImage(bassClef);
+		
+		//
+		
 		//passing in random notes
-		ImageView thisnote = new RandNote().randNotes();
+		Image thisnote = new RandNote().randNotes();
+		
 		
 		//added two buttons
 		Button transcription = new Button("Transcription");
@@ -54,16 +54,14 @@ public class Main extends Application {
 		transcription.setOnAction(e -> {
 			transcribing.setVisible(true);
 			transposing.setVisible(false);
-			new RandNote().randNotes();
 		});
 		transposition.setOnAction(e -> {
 			transcribing.setVisible(false);
 			transposing.setVisible(true);
-			new RandNote().randNotes();
 			//char newnote = new RandNote().randNotes();
 		});
 		//used the addAll method to condense added group node for scene
-		group.getChildren().addAll(iv, transcription, transcribing, transposition, transposing);
+		group.getChildren().addAll(transcription, transcribing, transposition, transposing);
 		
 		//to be implemented with random integer generator to generate assigned random notes
 		//lower case letters indicate flats, naturals are indicated with upper case letters
