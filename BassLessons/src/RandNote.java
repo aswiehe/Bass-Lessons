@@ -4,13 +4,19 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class RandNote extends Main{
-	public void randNotes(){
+	public ImageView randNotes(){
 		
 		Random rand = new Random();
 		int  n = rand.nextInt(12);
 		String note = "";
 		System.out.println(n);	
+		Image transposedNoteDL = new Image("D_Lower_Clef.png");
+		ImageView DL = new ImageView();
+		DL.setImage(transposedNoteDL);
 		
+		return DL;
+		
+		/*
 		switch (n){
 			case 0: note = "DL";
 			Image transposedNoteDL = new Image("D_Lower_Clef.png");
@@ -138,5 +144,6 @@ public class RandNote extends Main{
 			GH.setImage(transposedNoteGH);
 			break;
 		}
+		*/
 	}
 }
