@@ -1,7 +1,7 @@
 package pitches;
 import javafx.scene.image.Image;
 
-public class GLower {
+public class GLower extends PitchBuilder{
 
 	static Image standard = new Image("G_Lower_Clef.png");
 	//static Image tab = new Image("G_Lower_Fret");

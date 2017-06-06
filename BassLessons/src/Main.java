@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import java.util.Random;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
+import pitches.PitchBuilder;
 
 public class Main extends Application {
 	public void start(Stage stage){
@@ -49,6 +49,7 @@ public class Main extends Application {
 		transcription.setOnAction(e -> {
 			transcribing.setVisible(true);
 			transposing.setVisible(false);
+			new PitchBuilder().randomPitch(); // PitchBuilder class will be used to hold methods that "choose" which pitch classes will be needed and which attributes (class variables) will be needed.
 		});
 		transposition.setOnAction(e -> {
 			transcribing.setVisible(false);
