@@ -5,7 +5,7 @@ public class PitchBuilder {
 	private String selectedPitch;	
 	
 	public String randomPitch(){
-		int n = (int)(Math.random() * 58 + 1); // Random number 1-58 inclusive, each number will be used in a switch statement to execute code for pitch it identifies
+		int n = (int)(Math.random() * 58 + 1); // Random number 1-58 inclusive, each number will be used in a switch statement to execute code for pitch it identifies, some pitches are harmonically identical (ie C sharp and D flat, but the distinction will be important when scales are incorporated)
 		
 		switch(n){
 		case 1: selectedPitch = "D_Natural_1";
@@ -127,7 +127,6 @@ public class PitchBuilder {
 		case 59: selectedPitch = "G_Natural_4";
 		break;
 		}
-		System.out.println(selectedPitch);
 		return selectedPitch;
 	}
 }
