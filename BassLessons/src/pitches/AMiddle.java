@@ -1,13 +1,13 @@
+package pitches;
 import javafx.scene.image.Image;
 
 public class AMiddle {
 
-	public void aMiddle() {
-		Image standard = new Image("A_Middle_Clef.png");
-		//Image tab = new Image("A_Middle_Fret");
-		char letter = 'a';
-		boolean flat = false;
-		boolean sharp = false;
-		int octave = 2;
-	}
+	static Image standard = new Image("A_Middle_Clef.png");
+	//static Image tab = new Image("A_Middle_Fret");
+	static char letter = 'a';
+	static boolean flat = false;
+	static boolean sharp = false;
+	static int octave = 2;
+	static String note = Character.toUpperCase(letter) + Integer.toString(octave);
 }

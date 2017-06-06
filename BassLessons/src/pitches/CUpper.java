@@ -1,13 +1,13 @@
+package pitches;
 import javafx.scene.image.Image;
 
 public class CUpper {
 
-	public void cUpper() {
-		Image standard = new Image("C_Upper_Clef.png");
-		//Image tab = new Image("C_Upper_Fret");
-		char letter = 'c';
-		boolean flat = false;
-		boolean sharp = false;
-		int octave = 4;
-	}
+		static Image standard = new Image("C_Upper_Clef.png");
+		//static Image tab = new Image("C_Upper_Fret");
+		static char letter = 'c';
+		static boolean flat = false;
+		static boolean sharp = false;
+		static int octave = 4;
+		static String note = Character.toUpperCase(letter) + Integer.toString(octave);
 }

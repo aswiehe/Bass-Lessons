@@ -18,38 +18,33 @@ public class Main extends Application {
 		stage.setTitle("Bass Lessons");		
 		stage.setScene(scene);
 		stage.show();
-
-		//passing in bass clef image
-		//Image bassClef = new Image("Large_Bass_Clef.png");
-		//ImageView iv = new ImageView();
-		//iv.setImage(bassClef);
-		
-		//
-		
-		//passing in random notes
-		Image thisnote = new RandNote().randNotes();
-		
 		
 		//added two buttons
 		Button transcription = new Button("Transcription");
-		Button transposition = new Button("Transposition");		
+		Button transposition = new Button("Transposition");
+		
 		//set transcription button on specific location
 		transcription.setLayoutY(20);
 		transcription.setLayoutX(20);
+		
 		//set transposition button to the right of transcription button
 		transposition.setLayoutY(20);
 		transposition.setLayoutX(120);
+		
 		//added two labels
 		Label transcribing = new Label("Transcribing... ");
 		Label transposing = new Label("Transposing... ");
+		
 		//set transcribing and transposing labels on specific location
 		transcribing.setLayoutY(50);
 		transcribing.setLayoutX(75);
 		transposing.setLayoutY(50);
 		transposing.setLayoutX(75);
+		
 		//set labels to default invisible
 		transcribing.setVisible(false);
 		transposing.setVisible(false);
+		
 		//adding functionality to buttons to make labels visible
 		transcription.setOnAction(e -> {
 			transcribing.setVisible(true);
@@ -60,6 +55,7 @@ public class Main extends Application {
 			transposing.setVisible(true);
 			//char newnote = new RandNote().randNotes();
 		});
+		
 		//used the addAll method to condense added group node for scene
 		group.getChildren().addAll(transcription, transcribing, transposition, transposing);
 		

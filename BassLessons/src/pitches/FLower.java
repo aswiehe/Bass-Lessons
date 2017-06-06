@@ -1,13 +1,13 @@
+package pitches;
 import javafx.scene.image.Image;
 
 public class FLower {
 
-	public void fLower() {
-		Image standard = new Image("F_Lower_Clef.png");
-		//Image tab = new Image("F_Lower_Fret");
-		char letter = 'f';
-		boolean flat = false;
-		boolean sharp = false;
-		int octave = 1;
-	}
+	static Image standard = new Image("F_Lower_Clef.png");
+	//static Image tab = new Image("F_Lower_Fret");
+	static char letter = 'f';
+	static boolean flat = false;
+	static boolean sharp = false;
+	static int octave = 1;
+	static String note = Character.toUpperCase(letter) + Integer.toString(octave);
 }

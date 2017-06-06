@@ -1,13 +1,13 @@
+package pitches;
 import javafx.scene.image.Image;
 
 public class EUpper {
 
-	public void eUpper() {
-		Image standard = new Image("E_Upper_Clef.png");
-		//Image tab = new Image("E_Upper_Fret");
-		char letter = 'e';
-		boolean flat = false;
-		boolean sharp = false;
-		int octave = 3;
-	}
+	static Image standard = new Image("E_Upper_Clef.png");
+	//static Image tab = new Image("E_Upper_Fret");
+	static char letter = 'e';
+	static boolean flat = false;
+	static boolean sharp = false;
+	static int octave = 3;
+	static String note = Character.toUpperCase(letter) + Integer.toString(octave);
 }

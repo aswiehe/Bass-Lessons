@@ -1,13 +1,13 @@
+package pitches;
 import javafx.scene.image.Image;
 
 public class ALower {
 
-	public void aLower() {
-		Image standard = new Image("A_Lower_Clef.png");
-		//Image tab = new Image("A_Lower_Fret");
-		char letter = 'a';
-		boolean flat = false;
-		boolean sharp = false;
-		int octave = 1;
-	}
+	static Image standard = new Image("A_Lower_Clef.png");
+	//static Image tab = new Image("A_Lower_Fret");
+	static char letter = 'a';
+	static boolean flat = false;
+	static boolean sharp = false;
+	static int octave = 1;
+	static String note = Character.toUpperCase(letter) + Integer.toString(octave);
 }
