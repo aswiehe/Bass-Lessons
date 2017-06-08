@@ -4,11 +4,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import java.util.Random;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import pitches.PitchBuilder;
-
 public class Main extends Application {
 	public void start(Stage stage){
 		
