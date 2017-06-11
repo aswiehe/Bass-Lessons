@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <BorderPane prefHeight="800.0" prefWidth="1000.0">
+         <top>
+            <VBox prefHeight="22.0" prefWidth="423.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar VBox.vgrow="ALWAYS">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Options">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <Region minHeight="20.0" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+         <right>
+            <VBox prefHeight="775.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Region prefHeight="116.0" prefWidth="160.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Region>
+                  <MenuButton mnemonicParsing="false" prefHeight="33.0" prefWidth="133.0" text="Reviewing Notes">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Reviewing Notes" />
+                      <MenuItem mnemonicParsing="false" text="Reviewing Intervals" />
+                    </items>
+                  </MenuButton>
+                  <Region prefHeight="76.0" prefWidth="128.0" />
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                     <children>
+                        <ToggleButton mnemonicParsing="false" prefHeight="25.0" prefWidth="133.0" text="Allow Keystrokes" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="25.0" prefWidth="133.0" text="Autoplay Pitch" />
+                        <Slider fx:id="MaxSecondsPerAttempt" prefHeight="14.0" prefWidth="126.0" />
+                        <ComboBox prefWidth="133.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="133.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Time Per Round" wrappingWidth="127.404296875" />
+                                    <HBox prefHeight="42.0" prefWidth="133.0">
+                                       <children>
+                                          <VBox prefHeight="42.0" prefWidth="105.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Minutes" />
+                                                <Spinner prefHeight="25.0" prefWidth="55.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seconds" />
+                                                <Spinner prefHeight="25.0" prefWidth="55.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <ComboBox prefWidth="133.0" promptText="Notes Reviewed" />
+                              <ComboBox prefWidth="133.0" promptText="Animations" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets right="27.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="20.0" />
+               </BorderPane.margin>
+            </VBox>
+         </right>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="681.0" prefWidth="852.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox fx:id="displayWindowOne" prefHeight="681.0" prefWidth="429.0">
+                           <children>
+                              <HBox prefHeight="23.0" prefWidth="429.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox prefHeight="41.0" prefWidth="70.0">
+                                       <children>
+                                          <Button fx:id="playButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Play" />
+                                          <Text fx:id="attemptsPerUse" strokeType="OUTSIDE" strokeWidth="0.0" text="Attempts/Use: " />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="41.0" prefWidth="150.0">
+                                       <children>
+                                          <Button fx:id="highOctaveButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Highlight Octave" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Attempts/Use: " />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Button fx:id="revealNoteButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Reveal Note" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Attempts/Use: " />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <ImageView fitHeight="646.0" fitWidth="429.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="681.0" prefWidth="429.0">
+                           <children>
+                              <HBox prefHeight="23.0" prefWidth="429.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox prefHeight="41.0" prefWidth="70.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Play" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Attempts/Use: " />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="41.0" prefWidth="150.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Highlight Octave" />
+                                          <Text boundsType="LOGICAL_VERTICAL_CENTER" strokeType="OUTSIDE" strokeWidth="0.0" text="Attempts/Use: " />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Reveal Note" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Attempts/Use: " />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <ImageView fitHeight="646.0" fitWidth="429.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="30.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <bottom>
+            <HBox prefHeight="120.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="861.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="91.0">
+                                 <children>
+                                    <Text fx:id="attemptText" strokeType="OUTSIDE" strokeWidth="0.0" text="Attempts: " />
+                                    <Line startX="-100.0" />
+                                    <Text fx:id="passesText" strokeType="OUTSIDE" strokeWidth="0.0" text="Passes: " />
+                                    <Line startX="-100.0" />
+                                    <Text fx:id="failsText" strokeType="OUTSIDE" strokeWidth="0.0" text="Fails: " />
+                                    <Line startX="-100.0" />
+                                    <Text fx:id="totalHintsText" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Hints: " />
+                                    <Line startX="-100.0" />
+                                    <Text fx:id="hintScoreFactorText" strokeType="OUTSIDE" strokeWidth="0.0" text="Hint Score Factor: " />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="27.0">
+                                 <children>
+                                    <Text fx:id="attemptsDisplayed" strokeType="OUTSIDE" strokeWidth="0.0" text="#" />
+                                    <Text fx:id="passesDisplayed" strokeType="OUTSIDE" strokeWidth="0.0" text="#" />
+                                    <Text fx:id="failsDisplayed" strokeType="OUTSIDE" strokeWidth="0.0" text="#" />
+                                    <Text fx:id="totalHintsDisplayed" strokeType="OUTSIDE" strokeWidth="0.0" text="#" />
+                                    <Text fx:id="hintScoreFactorDisplayed" strokeType="OUTSIDE" strokeWidth="0.0" text="#" />
+                                 </children>
+                              </VBox>
+                              <Region prefHeight="100.0" prefWidth="301.0" />
+                              <HBox prefHeight="100.0" prefWidth="432.0">
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="258.0" spacing="20.0">
+                                       <children>
+                                          <VBox prefHeight="100.0" prefWidth="53.0" spacing="40.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" prefWidth="53.0" text="Pause" />
+                                                <Button mnemonicParsing="false" prefWidth="53.0" text="Stop" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="100.0" prefWidth="147.0">
+                                             <children>
+                                                <Label fx:id="timerLabel" text="Timer: " />
+                                                <Label fx:id="timerDisplayed" text="(Timer)" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="100.0" prefWidth="140.0">
+                                       <children>
+                                          <Label fx:id="calculatedScoreLabel" text="Score: " />
+                                          <Label fx:id="calculatedScoreDisplayed" text="(Score)" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="140.0" prefWidth="157.0" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefWidth="133.0" text="Leaderboard" />
+                        <Button mnemonicParsing="false" prefWidth="133.0" text="Scoring System" />
+                        <Button mnemonicParsing="false" prefWidth="133.0" text="Learning/Game Mode" />
+                        <Button mnemonicParsing="false" prefWidth="133.0" text="Start Transposing" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="30.0" left="30.0" />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
